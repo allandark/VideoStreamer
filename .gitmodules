@@ -1,0 +1,6 @@
+[submodule "VideoStreamerFrontend"]
+	path = VideoStreamerFrontend
+	url = git@github.com:allandark/VideoStreamerFrontend.git
+[submodule "VideoStreamerBackend"]
+	path = VideoStreamerBackend
+	url = git@github.com:allandark/VideoStreamerBackend.git
