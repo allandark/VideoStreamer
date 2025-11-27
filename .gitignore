@@ -3,3 +3,4 @@ proof_of_concept
 .vscode
 .venv
 logs/*
+testfiles/

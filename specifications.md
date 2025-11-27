@@ -54,4 +54,6 @@ ffmpeg -i input.mp4 \
   -hls_segment_filename "/var/www/html/get/chunk/playlist%d.ts" \
   /var/www/html/get/playlist/playlist.m3u8
 ```
+
+ffmpeg -i video1.mp4 -codec: copy -start_number 0 -hls_time 10 -hls_list_size 0 -hls_segment_filename "segment%d.ts" playlist.m3u8
     

@@ -1,0 +1,52 @@
+[] Backend
+    [] ENdpoints
+        //[] Auth Admin/Client
+        [] Video 
+            [] hls convert configure
+            [] track videos by id
+        [] Video Meta data
+        [x] Director
+        [x] Star
+        [x] Genre
+        [x] Series
+        [x] Subtitle
+        [] Async
+
+    [] Database
+        [] Complete models
+        [] Check video meta data
+
+    [] Media file
+        [] Utils Class
+        [] Abs paths for docker container
+        [] Subtitles
+        [] Async
+
+[] Frontend
+    [x] Setup react
+    [x] Setup Nginx
+    [] Video streamer
+    [] Video Browser
+    //[] User info
+    //[] Admin info
+    //[] Login
+    //[] Admin system interface
+
+
+[] Projectwise configuration
+
+Fixes:
+Backend:
+[] Video Endpoint:
+    get /api/video/chunk/<int:video_id>/<int:chunk_id>
+    get /api/video/playlist/<int:video_id>
+    delete /api/video/playlist/<int:video_id>
+
+Create video steps:
+    - upload mp4
+    - post video meta data (rename mp4 file, Convert hls)
+
+    get meta data
+MediaManager:
+- hls builder
+
