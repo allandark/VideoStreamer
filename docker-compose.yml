@@ -1,10 +1,26 @@
 services:
   rest-api:
     extends:
-      file: ./backend/docker-compose.yml
+      file: ./VideoStreamerBackend/docker-compose.yaml
       service: rest-api
+    volumes:
+      - ./db_root_password.txt:/run/secrets/db_root_password:ro
+  sql-database:
+    extends:
+      file: ./VideoStreamerBackend/docker-compose.yaml
+      service: sql-database
+    volumes:
+      - ./db_root_password.txt:/run/secrets/db_root_password:ro
 
   nginx-react:
     extends:
-      file: ./frontend/docker-compose.yml
+      file: ./VideoStreamerFrontend/docker-compose.yaml
       service: nginx-react
+
+
+networks: 
+  backend:
+    external: true
+
+volumes:
+  Media: {}
