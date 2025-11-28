@@ -1,0 +1,10 @@
+services:
+  rest-api:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: rest-api
+
+  nginx-react:
+    extends:
+      file: ./frontend/docker-compose.yml
+      service: nginx-react

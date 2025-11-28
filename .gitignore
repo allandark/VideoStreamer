@@ -4,3 +4,4 @@ proof_of_concept
 .venv
 logs/*
 testfiles/
+*password.txt
