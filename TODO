@@ -1,41 +1,20 @@
 [] Backend
     [] ENdpoints
-        //[] Auth Admin/Client
-        [x] Video 
-            [x] hls convert configure
-            [x] track videos by id
-        [x] Video Meta data
-        [x] Director
-        [x] Star
-        [x] Genre
-        [x] Series
-        [x] Subtitle
-        [x] Async
+        [] Auth Admin/Client
 
     [] Database
         [] Complete models
-        [x] Check video meta data
+
 
     [] Media file
-        [x] Utils Class
-        [x] Abs paths for docker container
         [] Subtitles
-        [x] Async
-
-    [] exit if no data con
-
+ 
 [] Frontend
-    [x] Setup react
-    [x] Setup Nginx
-    [x] Video streamer
-    [x] Video Browser
-    //[] User info
-    //[] Admin info
-    //[] Login
-    //[] Admin system interface
+    [] User info
+    [] Admin info
+    [] Login
+    [] Admin system interface
 
-
-[] Projectwise configuration
 
 
 
