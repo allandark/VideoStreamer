@@ -104,7 +104,7 @@ docker-compose up --build -d
 ```
 **Recreate containers if needed:**
 ```
-docker-compose up --build --force-recreate -d
+docker-compose up --build --no-cache --force-recreate -d
 ```
 
 

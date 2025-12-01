@@ -1,19 +1,65 @@
 [] Backend
-    [] ENdpoints
-        [] Auth Admin/Client
+    [] Auth - JWT & refresh tokens
+    [] User login
+    [] Admin login
+    [] Roles
+    [] User DB model/image, hash sensitive data
 
-    [] Database
-        [] Complete models
+    [] Database migration (docker exec ...)
+
+    [] Chunked Upload/media resource-> if media_id = None. Create MediaModel return id
+    [] Supported video formats
+    [] Complete config HLS task - 240p/480p/...? audio_track? subtitle track, builtin or media file? thumbnail?
+    [] Return video meta data for configuration
+    [] Remove Subtitle model/ it should be used as a MediaModel
+
+    [] Pytest
+        [] Unit test of task system
+        [] Unit test HLS builder
+        [] Unit test Media Endpoints
+        [] Unit test VideoMeta Endpoints
+    
+    [] Loadtest (https://github.com/rakyll/hey) vs concurrent workers
 
 
-    [] Media file
-        [] Subtitles
+[] Documentation -> 
+    [] Docstrings
+    [] SwaggerUI in depth descriptions
+    [] Readme Update VideoStreamer
+    [] Readme Update VideoStreamerBackend
+    [] Readme Update VideoStreamerFrontend
  
 [] Frontend
-    [] User info
-    [] Admin info
-    [] Login
+    [] Login - Store JWT Locally
+    [] User info/ Edit personal info
+    [] Admin info/upload video    
     [] Admin system interface
+
+
+Timeline:
+Monday:
+    [] Database migration (docker exec ...)
+    [] Chunked Upload/media resource-> if media_id = None. Create MediaModel return id
+    [] Frontend: Admin info/upload video
+    [] Supported video formats
+    [] Complete config HLS task - 240p/480p/...? audio_track? subtitle track, builtin or media file? thumbnail?
+    [] Return video meta data for configuration
+    [] Remove Subtitle model/ it should be used as a MediaModel
+
+Wednesday:
+    [] continue on unfinished tasks
+    [] Auth - JWT & refresh tokens
+    [] User login
+    [] Admin login
+    [] Roles
+    [] User DB model/image, hash sensitive data
+
+Thursday:
+    [] continue on unfinished tasks
+    [] Login - Store JWT Locally
+    [] User info/ Edit personal info
+Friday:
+
 
 
 
