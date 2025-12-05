@@ -5,7 +5,7 @@
     [] Roles
     [] User DB model/image, hash sensitive data
 
-    [] Database migration (docker exec ...)
+    [x] Database migration (docker exec ...)
 
     [] Chunked Upload/media resource-> if media_id = None. Create MediaModel return id
     [] Supported video formats
@@ -38,7 +38,7 @@
 
 Timeline:
 Monday:
-    [] Database migration (docker exec ...)
+    [x] Database migration (docker exec ...)
     [] Chunked Upload/media resource-> if media_id = None. Create MediaModel return id
     [] Frontend: Admin info/upload video
     [] Supported video formats

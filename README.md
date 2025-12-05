@@ -29,7 +29,7 @@ The architecture is designed for scalability, easy deployment, and maintainabili
 | Layer      | Technology/Framework      | Description  | 
 | -----------| ------------------------- |------------- |
 | Frontend | React |Single-page application for video browsing and streaming.|
-| Frontend | Server Nginx |Serves the compiled React app and proxies API .|
+| Frontend Server |  Nginx |Serves the compiled React app and proxies API .|
 | Backend API| Flask	RESTful |API for managing media metadata and handling video streaming requests.|
 | Backend Server| Gunicorn |WSGI server running Flask app, supporting multiple workers for concurrency.|
 | Database| MySQL |Stores video metadata and other persistent data.|
@@ -104,7 +104,7 @@ docker-compose up --build -d
 ```
 **Recreate containers if needed:**
 ```
-docker-compose up --build --no-cache --force-recreate -d
+docker-compose up --build --force-recreate -d
 ```
 
 
@@ -114,6 +114,34 @@ docker-compose up --build --no-cache --force-recreate -d
 - SwaggerUI:  http://localhost:8080/api/doc
 - Frontend: http://localhost:8080
 
+
+### Upload & Prepare Video via Admin
+If you are using the Admin interface:
+1. Create an upload task and start it.
+    - Navigate to the Admin page.
+    - Create a new upload_chunked task.
+    - Start the task to enable chunked upload.
+2. Create an HLS build task and start it
+    - From the Admin page, create a new hls_build task.
+    - Start the task to generate HLS segments and playlist using FFmpeg.
+3. Create video metadata resource
+    - Make a POST /api/video_meta request to register the video in the database.
+    - Include details like title, description, media_id, and any other required fields.
+
+POST /api/video_meta with a sample body:
+```
+{
+  "title": "string",
+  "media_id": 0,
+  "description": "string",
+  "language": "string",
+  "rating": 0,
+  "stars": [],
+  "directors": [],
+  "genres": [],
+  "series": []
+}
+```
 
 ## Frontend & Backend
 
